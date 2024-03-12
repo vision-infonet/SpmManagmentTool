@@ -1,0 +1,395 @@
+﻿<Window x:Class="SpmManagmentTool.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:tk="http://schemas.microsoft.com/wpf/2008/toolkit"
+    Title="SpmManagementTool" Height="735" Width="850" Closed="Window_Closed" Padding="0,0,0,0">
+    <Grid Background="{StaticResource NormalBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="26"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Menu Grid.Row="0" Grid.Column="0" IsMainMenu="True" Height="25" VerticalAlignment="Top" Style="{StaticResource MainMenu}"  >
+            <MenuItem Header="Log In/Out" Width="80" Height="25">
+                <MenuItem Header="Log In" Click="MenuItem_Click_Login" Width="120">
+                </MenuItem>
+                <MenuItem Header="Log Out" Click="MenuItem_Click_LogOut">
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="" Name="trickLoginMenuItem" Width="15" MouseDoubleClick="MenuItem_MouseDoubleClick_Login">
+            </MenuItem>
+        </Menu>    
+        <GroupBox Grid.Row="1" Grid.Column="0" Header="Connection Status" Name="ConnectOPTGrpbox" Height="50">
+            <Label Name="connectionsatusLbl2" Foreground="Red" BorderBrush="Beige" Height="30" VerticalAlignment="Center" ></Label>
+        </GroupBox>
+        <Grid Grid.Row="2" Grid.Column="0" Height="120">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="5"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="5" />
+             </Grid.ColumnDefinitions>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90" />
+                    <ColumnDefinition Width="90" />
+                    <ColumnDefinition Width="90" />
+                    <ColumnDefinition Width="90" />
+                    <ColumnDefinition Width="90" />
+                    <ColumnDefinition Width="90" />
+                    <ColumnDefinition Width="90" />
+                    <ColumnDefinition Width="90" />
+                    <ColumnDefinition Width="90" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Grid.Column="0" Name="CoreBtn" Content="General" Height="25" Width="80"  Click="CoreBtn_Click" Style="{StaticResource NormalButton}"></Button>
+                <Button Grid.Row="0" Grid.Column="1"  Name="CardReaderBtn" Content="CardReader" Height="25" Width="80"   Click="CardReaderBtn_Click" Style="{StaticResource NormalButton}"></Button>
+                <Button Grid.Row="0" Grid.Column="2"  Name="PrinterBtn" Content="Printer" Height="25" Width="80"   Click="PrinterBtn_Click" Style="{StaticResource NormalButton}"></Button>
+                <Button Grid.Row="0" Grid.Column="3"  Name="ScreenBtn" Content="Screen" Height="25" Width="80"   Click="ScreenBtn_Click" Style="{StaticResource NormalButton}"></Button>
+                <Button Grid.Row="0" Grid.Column="4"  Name="EmvModBtn" Content="EmvModuel" Height="25" Width="80"   Click="EmvModBtn_Click" Style="{StaticResource NormalButton}"></Button>
+                <Button Grid.Row="0" Grid.Column="5"  Name="SecModBtn" Content="SecModuel" Height="25" Width="80"   Click="SecModBtn_Click" Style="{StaticResource NormalButton}"></Button>
+                <Button Grid.Row="0" Grid.Column="6"  Name="KeypadBtn" Content="Keypad" Height="25" Width="80"  Click="KeypadBtn_Click" Style="{StaticResource NormalButton}"></Button>
+                <Button Grid.Row="0" Grid.Column="7"  Name="ContactlessBtn" Content="Contactless" Height="25" Width="80"  Click="ContactlessBtn_Click" Style="{StaticResource NormalButton}"></Button>
+                <Button Grid.Row="0" Grid.Column="8"  Name="BarcodeReaderBtn" Content="BarcodeRD" Height="25" Width="80" Click="BarcodeReaderBtn_Click" Style="{StaticResource NormalButton}"></Button>              
+            </Grid>
+            <Grid Grid.Row="3" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="21"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5" />
+                    <ColumnDefinition Width="34" />
+                    <ColumnDefinition Width="34" />
+                    <ColumnDefinition Width="34" />
+                    <ColumnDefinition Width="34" />
+                    <ColumnDefinition Width="34" />
+                    <ColumnDefinition Width="34" />
+                    <ColumnDefinition Width="34" />
+                    <ColumnDefinition Width="34" />
+                    <ColumnDefinition Width="34" />
+                    <ColumnDefinition Width="34" />
+                    <ColumnDefinition Width="34" />
+                    <ColumnDefinition Width="34" />
+                    <ColumnDefinition Width="34" />
+                    <ColumnDefinition Width="34" />
+                    <ColumnDefinition Width="34" />
+                    <ColumnDefinition Width="34" />
+                    <ColumnDefinition Width="34" />
+                    <ColumnDefinition Width="34" />
+                    <ColumnDefinition Width="34" />
+                    <ColumnDefinition Width="34" />
+                    <ColumnDefinition Width="34" />
+                    <ColumnDefinition Width="34" />
+                    <ColumnDefinition Width="34" />
+                    <ColumnDefinition Width="34" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="1" Height="20" Content="1" FontSize="10" HorizontalAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="2" Height="20" Content="2" FontSize="10" HorizontalAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="3" Height="20" Content="3" FontSize="10" HorizontalAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="4" Height="20" Content="4" FontSize="10" HorizontalAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="5" Height="20" Content="5" FontSize="10" HorizontalAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="6" Height="20" Content="6" FontSize="10" HorizontalAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="7" Height="20" Content="7" FontSize="10" HorizontalAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="8" Height="20" Content="8" FontSize="10" HorizontalAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="9" Height="20" Content="9" FontSize="10" HorizontalAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="10" Height="20" Content="10" FontSize="10" HorizontalAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="11" Height="20" Content="11" FontSize="10" HorizontalAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="12" Height="20" Content="12" FontSize="10" HorizontalAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="13" Height="20" Content="13" FontSize="10" HorizontalAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="14" Height="20" Content="14" FontSize="10" HorizontalAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="15" Height="20" Content="15" FontSize="10" HorizontalAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="16" Height="20" Content="16" FontSize="10" HorizontalAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="17" Height="20" Content="17" FontSize="10" HorizontalAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="18" Height="20" Content="18" FontSize="10" HorizontalAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="19" Height="20" Content="19" FontSize="10" HorizontalAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="20" Height="20" Content="20" FontSize="10" HorizontalAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="21" Height="20" Content="21" FontSize="10" HorizontalAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="22" Height="20" Content="22" FontSize="10" HorizontalAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="23" Height="20" Content="23" FontSize="10" HorizontalAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="24" Height="20" Content="24" FontSize="10" HorizontalAlignment="Center"></Label>
+                <!--<Label Grid.Row="1" Grid.Column="0"  Height="22" HorizontalAlignment="Left"  Name="SelectSpmLbl" VerticalAlignment="Bottom" Width="100" Content="Select SPM Unit"></Label>-->
+                <Button Grid.Row="1" Grid.Column="1"  Name="Spm1Btn" Width="34" Height="46"  IsEnabled="True" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="Spm1Btn_Click" Style="{StaticResource NormalButton}">
+                    <DockPanel LastChildFill="True">
+                        <Label Name="Spm1BtnLblStatus" DockPanel.Dock="Bottom" Content="OFF" FontSize="10" ></Label>
+                        <Image Name="Spm1BtnImgStatus" Source="img/16_deactivate.gif" Stretch="None"></Image>
+                    </DockPanel>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="2"  Name="Spm2Btn" Height="46" Width="34" IsEnabled="True" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="Spm2Btn_Click" Style="{StaticResource NormalButton}">
+                    <DockPanel LastChildFill="True">
+                        <Label Name="Spm2BtnLblStatus" DockPanel.Dock="Bottom" Content="OFF" FontSize="10"></Label>
+                        <Image Name="Spm2BtnImgStatus" Source="img/16_deactivate.gif" Stretch="None"></Image>
+                    </DockPanel>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="3"  Name="Spm3Btn" Height="46" Width="34" IsEnabled="True" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="Spm3Btn_Click" Style="{StaticResource NormalButton}">
+                    <DockPanel LastChildFill="True">
+                        <Label Name="Spm3BtnLblStatus" DockPanel.Dock="Bottom" Content="OFF" FontSize="10"></Label>
+                        <Image Name="Spm3BtnImgStatus" Source="img/16_deactivate.gif" Stretch="None"></Image>
+                    </DockPanel>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="4"  Name="Spm4Btn" Height="46" Width="34" IsEnabled="True" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="Spm4Btn_Click" Style="{StaticResource NormalButton}">
+                    <DockPanel LastChildFill="True">
+                        <Label Name="Spm4BtnLblStatus" DockPanel.Dock="Bottom" Content="OFF" FontSize="10"></Label>
+                        <Image Name="Spm4BtnImgStatus" Source="img/16_deactivate.gif" Stretch="None"></Image>
+                    </DockPanel>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="5"  Name="Spm5Btn" Height="46" Width="34" IsEnabled="True" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="Spm5Btn_Click" Style="{StaticResource NormalButton}">
+                    <DockPanel LastChildFill="True">
+                        <Label Name="Spm5BtnLblStatus" DockPanel.Dock="Bottom" Content="OFF" FontSize="10"></Label>
+                        <Image Name="Spm5BtnImgStatus" Source="img/16_deactivate.gif" Stretch="None"></Image>
+                    </DockPanel>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="6"  Name="Spm6Btn" Height="46" Width="34" IsEnabled="True" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="Spm6Btn_Click" Style="{StaticResource NormalButton}">
+                    <DockPanel LastChildFill="True">
+                        <Label Name="Spm6BtnLblStatus" DockPanel.Dock="Bottom" Content="OFF" FontSize="10"></Label>
+                        <Image Name="Spm6BtnImgStatus" Source="img/16_deactivate.gif" Stretch="None"></Image>
+                    </DockPanel>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="7"  Name="Spm7Btn" Height="46" Width="34" IsEnabled="True" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="Spm7Btn_Click" Style="{StaticResource NormalButton}">
+                    <DockPanel LastChildFill="True">
+                        <Label Name="Spm7BtnLblStatus" DockPanel.Dock="Bottom" Content="OFF" FontSize="10"></Label>
+                        <Image Name="Spm7BtnImgStatus" Source="img/16_deactivate.gif" Stretch="None"></Image>
+                    </DockPanel>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="8"  Name="Spm8Btn" Height="46" Width="34" IsEnabled="True" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="Spm8Btn_Click" Style="{StaticResource NormalButton}">
+                    <DockPanel LastChildFill="True">
+                        <Label Name="Spm8BtnLblStatus" DockPanel.Dock="Bottom" Content="OFF" FontSize="10"></Label>
+                        <Image Name="Spm8BtnImgStatus" Source="img/16_deactivate.gif" Stretch="None"></Image>
+                    </DockPanel>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="9"  Name="Spm9Btn" Height="46" Width="34" IsEnabled="True" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="Spm9Btn_Click" Style="{StaticResource NormalButton}">
+                    <DockPanel LastChildFill="True">
+                        <Label Name="Spm9BtnLblStatus" DockPanel.Dock="Bottom" Content="OFF" FontSize="10"></Label>
+                        <Image Name="Spm9BtnImgStatus" Source="img/16_deactivate.gif" Stretch="None"></Image>
+                    </DockPanel>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="10"  Name="Spm10Btn" Height="46" Width="34" IsEnabled="True" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="Spm10Btn_Click" Style="{StaticResource NormalButton}">
+                    <DockPanel LastChildFill="True">
+                        <Label Name="Spm10BtnLblStatus" DockPanel.Dock="Bottom" Content="OFF" FontSize="10"></Label>
+                        <Image Name="Spm10BtnImgStatus" Source="img/16_deactivate.gif" Stretch="None"></Image>
+                    </DockPanel>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="11"  Name="Spm11Btn" Height="46" Width="34" IsEnabled="True" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="Spm11Btn_Click" Style="{StaticResource NormalButton}">
+                    <DockPanel LastChildFill="True">
+                        <Label Name="Spm11BtnLblStatus" DockPanel.Dock="Bottom" Content="OFF" FontSize="10"></Label>
+                        <Image Name="Spm11BtnImgStatus" Source="img/16_deactivate.gif" Stretch="None"></Image>
+                    </DockPanel>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="12"  Name="Spm12Btn" Height="46" Width="34" IsEnabled="True" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="Spm12Btn_Click" Style="{StaticResource NormalButton}">
+                    <DockPanel LastChildFill="True">
+                        <Label Name="Spm12BtnLblStatus" DockPanel.Dock="Bottom" Content="OFF" FontSize="10"></Label>
+                        <Image Name="Spm12BtnImgStatus" Source="img/16_deactivate.gif" Stretch="None"></Image>
+                    </DockPanel>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="13"  Name="Spm13Btn" Height="46" Width="34" IsEnabled="True" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="Spm13Btn_Click" Style="{StaticResource NormalButton}">
+                    <DockPanel LastChildFill="True">
+                        <Label Name="Spm13BtnLblStatus" DockPanel.Dock="Bottom" Content="OFF" FontSize="10"></Label>
+                        <Image Name="Spm13BtnImgStatus" Source="img/16_deactivate.gif" Stretch="None"></Image>
+                    </DockPanel>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="14"  Name="Spm14Btn" Height="46" Width="34" IsEnabled="True" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="Spm14Btn_Click" Style="{StaticResource NormalButton}">
+                    <DockPanel LastChildFill="True">
+                        <Label Name="Spm14BtnLblStatus" DockPanel.Dock="Bottom" Content="OFF" FontSize="10"></Label>
+                        <Image Name="Spm14BtnImgStatus" Source="img/16_deactivate.gif" Stretch="None"></Image>
+                    </DockPanel>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="15"  Name="Spm15Btn" Height="46" Width="34" IsEnabled="True" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="Spm15Btn_Click" Style="{StaticResource NormalButton}">
+                    <DockPanel LastChildFill="True">
+                        <Label Name="Spm15BtnLblStatus" DockPanel.Dock="Bottom" Content="OFF" FontSize="10"></Label>
+                        <Image Name="Spm15BtnImgStatus" Source="img/16_deactivate.gif" Stretch="None"></Image>
+                    </DockPanel>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="16"  Name="Spm16Btn" Height="46" Width="34" IsEnabled="True" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="Spm16Btn_Click" Style="{StaticResource NormalButton}">
+                    <DockPanel LastChildFill="True">
+                        <Label Name="Spm16BtnLblStatus" DockPanel.Dock="Bottom" Content="OFF" FontSize="10"></Label>
+                        <Image Name="Spm16BtnImgStatus" Source="img/16_deactivate.gif" Stretch="None"></Image>
+                    </DockPanel>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="17"  Name="Spm17Btn" Height="46" Width="34" IsEnabled="True" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="Spm17Btn_Click" Style="{StaticResource NormalButton}">
+                    <DockPanel LastChildFill="True">
+                        <Label Name="Spm17BtnLblStatus" DockPanel.Dock="Bottom" Content="OFF" FontSize="10"></Label>
+                        <Image Name="Spm17BtnImgStatus" Source="img/16_deactivate.gif" Stretch="None"></Image>
+                    </DockPanel>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="18"  Name="Spm18Btn" Height="46" Width="34" IsEnabled="True" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="Spm18Btn_Click" Style="{StaticResource NormalButton}">
+                    <DockPanel LastChildFill="True">
+                        <Label Name="Spm18BtnLblStatus" DockPanel.Dock="Bottom" Content="OFF" FontSize="10"></Label>
+                        <Image Name="Spm18BtnImgStatus" Source="img/16_deactivate.gif" Stretch="None"></Image>
+                    </DockPanel>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="19"  Name="Spm19Btn" Height="46" Width="34" IsEnabled="True" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="Spm19Btn_Click" Style="{StaticResource NormalButton}">
+                    <DockPanel LastChildFill="True">
+                        <Label Name="Spm19BtnLblStatus" DockPanel.Dock="Bottom" Content="OFF" FontSize="10"></Label>
+                        <Image Name="Spm19BtnImgStatus" Source="img/16_deactivate.gif" Stretch="None"></Image>
+                    </DockPanel>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="20"  Name="Spm20Btn" Height="46" Width="34" IsEnabled="True" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="Spm20Btn_Click" Style="{StaticResource NormalButton}">
+                    <DockPanel LastChildFill="True">
+                        <Label Name="Spm20BtnLblStatus" DockPanel.Dock="Bottom" Content="OFF" FontSize="10"></Label>
+                        <Image Name="Spm20BtnImgStatus" Source="img/16_deactivate.gif" Stretch="None"></Image>
+                    </DockPanel>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="21"  Name="Spm21Btn" Height="46" Width="34" IsEnabled="True" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="Spm21Btn_Click" Style="{StaticResource NormalButton}">
+                    <DockPanel LastChildFill="True">
+                        <Label Name="Spm21BtnLblStatus" DockPanel.Dock="Bottom" Content="OFF" FontSize="10"></Label>
+                        <Image Name="Spm21BtnImgStatus" Source="img/16_deactivate.gif" Stretch="None"></Image>
+                    </DockPanel>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="22"  Name="Spm22Btn" Height="46" Width="34" IsEnabled="True" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="Spm22Btn_Click" Style="{StaticResource NormalButton}">
+                    <DockPanel LastChildFill="True">
+                        <Label Name="Spm22BtnLblStatus" DockPanel.Dock="Bottom" Content="OFF" FontSize="10"></Label>
+                        <Image Name="Spm22BtnImgStatus" Source="img/16_deactivate.gif" Stretch="None"></Image>
+                    </DockPanel>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="23"  Name="Spm23Btn" Height="46" Width="34" IsEnabled="True" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="Spm23Btn_Click" Style="{StaticResource NormalButton}">
+                    <DockPanel LastChildFill="True">
+                        <Label Name="Spm23BtnLblStatus" DockPanel.Dock="Bottom" Content="OFF" FontSize="10"></Label>
+                        <Image Name="Spm23BtnImgStatus" Source="img/16_deactivate.gif" Stretch="None"></Image>
+                    </DockPanel>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="24"  Name="Spm24Btn" Height="46" Width="34" IsEnabled="True" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="Spm24Btn_Click" Style="{StaticResource NormalButton}">
+                    <DockPanel LastChildFill="True">
+                        <Label Name="Spm24BtnLblStatus" DockPanel.Dock="Bottom" Content="OFF" FontSize="10"></Label>
+                        <Image Name="Spm24BtnImgStatus" Source="img/16_deactivate.gif" Stretch="None"></Image>
+                    </DockPanel>
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="0" Height="310">
+            <TabControl Name="tabAllTabs">
+                <TabItem Name="tabGeneralCommands" Header="General Commands">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="5"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="5"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="5"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5" />
+                            <ColumnDefinition Width="350" />
+                            <ColumnDefinition Width="450" />
+                            <ColumnDefinition Width="5" />
+                        </Grid.ColumnDefinitions>
+                        <Label  Grid.Row="1" Grid.Column="1" Height="28" HorizontalAlignment="Center" Name="SelectCmdLbl" Width="100" Content="Select a command"></Label>
+                        <Label  Grid.Row="1" Grid.Column="2" Height="28" HorizontalAlignment="Center" Name="SetCmdLbl" Width="300" Content="Set the command parameters if applicapable"></Label>
+                        <ListBox Grid.Row="2" Grid.Column="1" Name="lstboxCommands" Height="200" Width="300" Style="{StaticResource styleListBox}"></ListBox>
+                        <TextBox Grid.Row="2" Grid.Column="2" Name="SetCmdTxt" Height="200" VerticalScrollBarVisibility="Visible" Style="{StaticResource CustomTextBoxStyle}"></TextBox>
+                        <Button Grid.Row="5" Grid.Column="1"  Name="SendBtn" Content="Send" Height="25" Width="80"  Click="SendBtn_Click" Style="{StaticResource NormalButton}">
+                            <Button.ToolTip>
+                                <ToolTip>
+                                    <StackPanel>
+                                        <TextBlock FontWeight="Bold">Send Request</TextBlock>
+                                        <TextBlock>Send the selected request to the SPM.</TextBlock>
+                                    </StackPanel>
+                                </ToolTip>
+                            </Button.ToolTip>
+                        </Button>
+                    </Grid>
+                </TabItem>
+                <TabItem Name="tabSPMPromptLoader" Header="Prompt Load">
+                <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="10"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="120" />
+                            <ColumnDefinition Width="150" />
+                            <ColumnDefinition Width="120" />
+                            <ColumnDefinition Width="120" />
+                            <ColumnDefinition Width="120" />
+                    </Grid.ColumnDefinitions>
+                    <CheckBox Grid.Row="1" Grid.Column="1" Name="ckbEnableLoadPromptSingle" Click="ckbEnableLoadPromptSingle_Checked">Single Spm Unit</CheckBox>
+                    <CheckBox Grid.Row="3" Grid.Column="1" Name="ckbEnableLoadPromptAll" Click="ckbEnableLoadPromptAll_Checked">All Spm Unit</CheckBox>
+                    <Button Grid.Row="1" Grid.Column="2" Name="loadPromtSingleSpmBtn" Click="loadPromtSingleSpmBtn_Click" IsEnabled="False"
+                            HorizontalAlignment="Center" Width="110" Height="25"  Style="{StaticResource NormalButton}">Load Single SPM Units</Button>
+                    <Button Grid.Row="3" Grid.Column="2" Name="loadPromtAllSpmBtn" Click="loadPromtAllSpmBtn_Click" IsEnabled="False"
+                            HorizontalAlignment="Center" Width="110" Height="25"  Style="{StaticResource NormalButton}">Load All SPM Units</Button>
+                    <ProgressBar  Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="4" Name="pgbLoadPrompt" Height="20" VerticalAlignment="Bottom" />
+                    <Label Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="4" Name="lblLoadStatus" Height="25" Foreground="Red" BorderBrush="Beige" VerticalAlignment="Bottom" BorderThickness="1"></Label>
+                    </Grid>
+                </TabItem>
+                <TabItem Name="tabAppPubKeyLoader" Header="App / Pub Keys Load">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"></RowDefinition>
+                            <RowDefinition Height="50"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="10"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="120" />
+                            <ColumnDefinition Width="120" />
+                            <ColumnDefinition Width="120" />
+                            <ColumnDefinition Width="120" />
+                            <ColumnDefinition Width="120" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="6" Name="lblNote"></Label>
+                        <CheckBox Grid.Row="2" Grid.Column="1" Name="ckbEnableLoadAppsKeysSingle" Click="ckbEnableLoadAppsKeysSingle_Checked">Single Spm Unit</CheckBox>
+                        <CheckBox Grid.Row="4" Grid.Column="1" Name="ckbEnableLoadAppsKeysAll" Click="ckbEnableLoadAppsKeysAll_Checked">All Spm Unit</CheckBox>
+                        <Button Grid.Row="2" Grid.Column="2" Name="loadAppKeysSingleSpmBtn" Click="loadAppKeysSingleSpmBtn_Click" IsEnabled="False"
+                                HorizontalAlignment="Center" Width="110" Height="25"  Style="{StaticResource NormalButton}">Load Single SPM Units</Button>
+                        <Button Grid.Row="4" Grid.Column="2" Name="loadAppsKeysAllSpmBtn" Click="loadAppsKeysAllSpmBtn_Click" IsEnabled="False"
+                                HorizontalAlignment="Center" Width="110" Height="25"  Style="{StaticResource NormalButton}">Load All SPM Units</Button>
+                        <ProgressBar  Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="4" Name="pgbLoadAppsKeys" Height="20" VerticalAlignment="Bottom" />
+                        <Label Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="4" Name="lblLoadAppsKeysStatus" Height="25" Foreground="Red"
+                               BorderBrush="Beige" VerticalAlignment="Bottom" BorderThickness="1"></Label>
+                    </Grid>
+                </TabItem>
+                <TabItem Name="tabTest">
+                </TabItem>
+            </TabControl>
+        </Grid>
+        <GroupBox  Grid.Row="4" Grid.Column="0" Header="SPM Response Received" Name="DataReceivedGrpbox" Height="280">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="5"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5" />
+                    <ColumnDefinition Width="800" />
+                    <ColumnDefinition Width="5" />
+                </Grid.ColumnDefinitions>
+                <TextBox Grid.Row="1" Grid.Column="1" Name="DataReceiveTxt" Style="{StaticResource CustomTextBoxStyle}"
+                         Width="800" Height="150" HorizontalAlignment="Center" IsReadOnly="True" VerticalScrollBarVisibility="Visible"></TextBox>
+                <Button  Grid.Row="2" Grid.Column="1" Content="Clear" Name="ClearBtn" Height="20" Width="120" 
+                         HorizontalAlignment="Center"  Click="ClearBtn_Click" Style="{StaticResource NormalButton}"></Button>
+                
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>

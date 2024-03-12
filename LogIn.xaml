@@ -1,0 +1,22 @@
+﻿<Window x:Class="SpmManagmentTool.LogIn"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="LogIn" Height="300" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="1" Grid.Column="0" Name="lblPassword" Content="Password" HorizontalAlignment="Center" ></Label> 
+        <PasswordBox Grid.Row="2" Grid.Column="0" Name="psbPassword" KeyUp="FocusOnLoginBtn" Width="200"></PasswordBox>
+        <Label Grid.Row="3" Grid.Column="0" Name="lblSuccess" Visibility="Hidden" Foreground="Green" HorizontalAlignment="Center" ></Label>
+        <Button Grid.Row="4" Grid.Column="0" Content="Go to Home Page" Width="100" Height="25" Visibility="Hidden" Name="btnGoToHome" Click="Button_GoToHome_Click"></Button>
+    </Grid>
+</Window>

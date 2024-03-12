@@ -1,0 +1,69 @@
+﻿Core,GetTerminalId, GetTerminalId
+Core,GetPackageVersion,  GetPackageVersion
+Core,GetOperationalState,  GetOperationalState
+Core,GetTerminalState,  GetTerminalState
+Core,GetBatteryState, GetBatteryState
+Core,Reset, Reset
+Core,SetDateTime, SetDateTime
+Core,SetToIdle, SetToIdle
+Core,DisplaySecurePrompt, DisplaySecurePrompt
+Core,EnableFunctionKeys, EnableFunctionKeys
+Core,DisableFunctionKeys, DisableFunctionKeys
+Core,EnableCancelKey, EnableCancelKey
+Core,DisableCancelKey, DisableCancelKey
+Screen, DisplayCommand/GetFonts, DisplayCommand/GetFonts
+Screen, DisplayCommand/GetStatus, DisplayCommand/GetStatus
+Screen, DisplayCommand/GetSupportedLanguages, DisplayCommand/GetSupportedLanguages
+Screen, DisplayCommand/GetCurrentLanguage, DisplayCommand/GetCurrentLanguage
+Screen, DisplayCommand/SetCurrentLanguage, DisplayCommand/SetCurrentLanguage
+Screen, DisplayCommand/GetMessageWindowProperties, DisplayCommand/GetMessageWindowProperties
+Screen, DisplayCommand/GetDataEntryWindowProperties, DisplayCommand/GetDataEntryWindowProperties
+Screen, DisplayCommand/SetDataEntryWindowProperties, DisplayCommand/SetDataEntryWindowProperties
+Screen, DisplayCommand/GetAnimationList, DisplayCommand/GetAnimationList
+Screen, DisplayCommand/GetDisplayType, DisplayCommand/GetDisplayType
+Screen, DisplayCommand/GetImageDetails, DisplayCommand/GetImageDetails
+Screen, DisplayCommand/GetImageList, DisplayCommand/GetImageList
+Screen, DisplayCommand/GetPromptDetails, DisplayCommand/GetPromptDetails
+Screen, DisplayCommand/SetPromptDetails, DisplayCommand/SetPromptDetails
+Screen, DisplayCommand/GetPromptList, DisplayCommand/GetPromptList
+Screen, DisplayCommand/GetSoftKeyProperties, DisplayCommand/GetSoftKeyProperties
+Screen, DisplayCommand/SetAnimationDetails, DisplayCommand/SetAnimationDetails
+Screen, DisplayCommand/SetImageDetails, DisplayCommand/SetImageDetails
+Screen, DisplayCommand/SetMessageWindowProperties, DisplayCommand/SetMessageWindowProperties
+Screen, DisplayCommand/SetSoftKeyProperties, DisplayCommand/SetSoftKeyProperties
+Screen, DisplayCommand/DisplayPrompt, DisplayCommand/DisplayPrompt
+Screen, DisplayCommand/DeleteAllPrompts, DisplayCommand/DeleteAllPrompts
+Screen, DisplayCommand/DisplayPromptImmediate, DisplayCommand/DisplayPromptImmediate
+Keypad, KeypadCommand/EnableKeypadFunctionKeys, KeypadCommand/EnableKeypadFunctionKeys
+Keypad, KeypadCommand/DisableKeypad, KeypadCommand/DisableKeypad
+Keypad, NonSecureKeypadCommand/EnableKeypad, NonSecureKeypadCommand/EnableKeypad
+Cardreader, MagStripeReaderCommand/OpenMagStripeReader, MagStripeReaderCommand/OpenMagStripeReader
+Cardreader, MagStripeReaderCommand/CloseMagStripeReader, MagStripeReaderCommand/CloseMagStripeReader
+Cardreader, MagStripeReaderCommand/FlashLight, MagStripeReaderCommand/FlashLight
+Cardreader, MagStripeReaderCommand/TurnLightOn, MagStripeReaderCommand/TurnLightOn
+Cardreader, ChipCardReaderCommand/GetCardPosition, ChipCardReaderCommand/GetCardPosition
+Cardreader, ChipCardReaderCommand/OpenChipCardReader, ChipCardReaderCommand/OpenChipCardReader
+Cardreader, ChipCardReaderCommand/CloseChipCardReader, ChipCardReaderCommand/CloseChipCardReader
+Cardreader, ChipCardReaderCommand/TurnLightOn, ChipCardReaderCommand/TurnLightOn
+Cardreader, ChipCardReaderCommand/FlashLight, ChipCardReaderCommand/FlashLight
+Printer, PrinterCommand/Print, PrinterCommand/Print
+Printer, PrinterCommand/GetPaperStatus, PrinterCommand/GetPaperStatus
+Printer, PrinterCommand/GetStatus, PrinterCommand/GetStatus
+Printer, PrinterCommand/GetCapabilities, PrinterCommand/GetCapabilities
+SecureModule, SecurityModuleCommand/GetSupportedKeyHierarchies, SecurityModuleCommand/GetSupportedKeyHierarchies
+SecureModule, SecurityModuleCommand/GetSupportedWorkingKeys, SecurityModuleCommand/GetSupportedWorkingKeys
+SecureModule, SecurityModuleCommand/CalculateMAC, SecurityModuleCommand/CalculateMAC
+SecureModule, SecurityModuleCommand/VerifyMAC, SecurityModuleCommand/VerifyMAC
+SecureModule, SecurityModuleCommand/GetHierarchyInUse, SecurityModuleCommand/GetHierarchyInUse
+SecureModule, SecurityModuleCommand/SetWorkingKey, SecurityModuleCommand/SetWorkingKey
+SecureModule, SecurityModuleCommand/GetWorkingKeyStatistics, SecurityModuleCommand/GetWorkingKeyStatistics
+EMVModule, EMVModuleCommand/DownloadApplication, EMVModuleCommand/DownloadApplication
+EMVModule, EMVModuleCommand/GetEMVModuleStatus, EMVModuleCommand/GetEMVModuleStatus
+EMVModule, EMVModuleCommand/InitiateTransaction, EMVModuleCommand/InitiateTransaction
+EMVModule, EMVModuleCommand/ContinueTransaction, EMVModuleCommand/ContinueTransaction
+EMVModule, EMVModuleCommand/ReenterOnlinePIN, EMVModuleCommand/ReenterOnlinePIN
+EMVModule, EMVModuleCommand/CompleteOnlineTransaction, EMVModuleCommand/CompleteOnlineTransaction
+EMVModule, EMVModuleCommand/ReadCardData, EMVModuleCommand/ReadCardData
+EMVModule, EMVModuleCommand/AbortTransaction, EMVModuleCommand/AbortTransaction
+EMVModule, EMVModuleCommand/SetTimeout, EMVModuleCommand/SetTimeout
+
