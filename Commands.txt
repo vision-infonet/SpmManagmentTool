@@ -85,3 +85,4 @@ BarcodeReader, BarcodeReaderCommand/OpenBarcodeReader, BarcodeReaderCommand/Open
 BarcodeReader, BarcodeReaderCommand/CloseBarcodeReader, BarcodeReaderCommand/CloseBarcodeReader
 
 
+
