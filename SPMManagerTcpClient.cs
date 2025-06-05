@@ -226,7 +226,7 @@ namespace SpmManagmentTool
                                     _loadAppsKeysFinishedEvent.Set();
                                     loadcount = 0;
                                     Thread.Sleep(10);
-                                    _loadAppsKeysFinishedEvent.Reset();
+                                    //_loadAppsKeysFinishedEvent.Reset();
                                 }
 
                                 if (temp.Contains("SetPromptDetailsResponse"))

@@ -392,6 +392,7 @@ namespace SpmManagmentTool
             {
                 _spmmanagertcpclient.writeStream("LoadAppsKeysByManager{PARAMS}" + "SpmId=" + spmid);
                 SetControlValue(lblLoadAppsKeysStatus, new object[]{"Loading Applications & Public Keys into SPM " + spmid + " ..."});
+                _spmmanagertcpclient._loadAppsKeysFinishedEvent.Reset();//2025-Apr-09 Vision moved here
                 if (_spmmanagertcpclient._loadAppsKeysFinishedEvent.WaitOne(PROMPTLOADINGTIMEOUT))
                 {
                     if (_isAppsKeysLoadSuccess)
@@ -423,7 +424,7 @@ namespace SpmManagmentTool
                 _spmmanagertcpclient._loadAppsKeysFinishedEvent.Set();
             }
             
-            _spmmanagertcpclient._loadAppsKeysFinishedEvent.Reset();
+            //_spmmanagertcpclient._loadAppsKeysFinishedEvent.Reset();
         }
 
         private void ResetPromptProgressbar()
